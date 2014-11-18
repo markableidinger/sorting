@@ -1,5 +1,3 @@
-import random
-
 def insertion_sort(list_to_sort):
     sorted_list = []
     unsorted_list = list_to_sort[:]
@@ -17,13 +15,6 @@ def insertion_sort(list_to_sort):
             if not inserted:
                 sorted_list.append(selected)
     return sorted_list
-
-
-def make_list():
-    random_list = []
-    for i in range(50):
-        random_list.append(random.randrange(100))
-    return random_list
 
 if __name__ == '__main__':
     #best case: O(n)
