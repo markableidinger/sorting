@@ -3,8 +3,8 @@ from insertion import *
 import random
 
 
-class DLLTestCase(unittest.TestCase):
-    '''Tests for dll.py'''
+class InsertionTestCase(unittest.TestCase):
+    '''Tests for insertion.py'''
 
     def make_list(self):
         random_list = []
@@ -16,3 +16,7 @@ class DLLTestCase(unittest.TestCase):
         for i in range(50):
             l = self.make_list()
             self.assertTrue(insertion_sort(l) == sorted(l))
+
+    def test_small(self):
+        self.assertTrue(insertion_sort([]) == [])
+        self.assertTrue(insertion_sort([1]) == [1])
